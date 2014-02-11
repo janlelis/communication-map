@@ -1,0 +1,10 @@
+//= require underscore/underscore
+//= require_tree ./support
+//= require jquery
+//= require angular
+//= require angular-google-maps
+//= require eventEmitter
+//= require palava
+//= require cm
+//= require app
+//= require_tree ./app/controllers
