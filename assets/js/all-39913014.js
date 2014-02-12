@@ -37847,8 +37847,8 @@ var CMProtocol = {
     this.discoverTtl = 4;
     this.updateTtl = 6;
     this.discoverHopLimit = 10;
-    this.initialConnectCount = 2;
-    this.initialConnectTimeout = 3000;
+    this.initialConnectCount = 3;
+    this.initialConnectTimeout = 3600;
     this.discoverTimeout = null;
     this.bootstrapServer = 'wss:machine.palava.tv';
     this.stunServer = 'stun:stun.palava.tv';
@@ -37916,7 +37916,7 @@ var CMProtocol = {
     var that = this;
     var channel = new palava.WebSocketChannel(this.bootstrapServer);
     channel.on('open', function(){
-      var rtc = new palava.Session({ channel: channel, roomId: 'w2w-test8' });
+      var rtc = new palava.Session({ channel: channel, roomId: 'info/41' });
       rtc.userMedia = new palava.Gum({ audio: false, video: false, data: true });
       rtc.userMedia.requestStream = function(){ true } // FIXME
 
